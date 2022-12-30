@@ -1,0 +1,35 @@
+.dft-btn{
+    @apply px-4 py-1 rounded-full font-medium duration-75 text-white 
+}
+
+.btn-txt{
+    @apply flex items-center gap-1
+}
+
+.btn-primary{
+    @apply bg-secondary-main hover:bg-secondary-light active:bg-gray-900
+}
+
+.btn-cancel{
+    @apply bg-system-error-main hover:bg-system-error-light active:bg-gray-900
+}
+
+.btn-success{
+    @apply bg-system-success-main hover:bg-system-success-light active:bg-gray-900
+}
+
+.btn-outlined{
+    @apply border-2 hover:text-white
+}
+
+.btn-primary-outlined{
+    @apply border-secondary-main text-secondary-main hover:bg-secondary-main hover:text-white active:bg-gray-900 active:border-gray-900
+}
+
+.btn-cancel-outlined{
+    @apply border-system-error-main text-system-error-main hover:bg-system-error-main hover:text-white active:bg-gray-900 active:border-gray-900
+}
+
+.btn-success-outlined{
+    @apply border-system-success-main text-system-success-main hover:bg-system-success-main active:bg-gray-900 active:border-gray-900
+}
