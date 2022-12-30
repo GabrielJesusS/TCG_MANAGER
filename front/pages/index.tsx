@@ -1,4 +1,4 @@
-import Button from "../components/button/BaseTemplate";
+import Button from "../components/button/Button";
 import {MdBattery90} from 'react-icons/md'
 
 export default function Home() {
