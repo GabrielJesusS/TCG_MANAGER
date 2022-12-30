@@ -1,12 +1,11 @@
 import Button from "../components/button/Button";
 import {MdBattery90} from 'react-icons/md'
+import Input from "../components/input/Input";
 
 export default function Home() {
   return (
     <>
-     <Button variant="primary" type="outlined" >primeiro</Button>
-     <Button variant="cancel" type="outlined" >cancel</Button>
-     <Button variant="success" type="outlined" >sucesso</Button>
+      <Input icon={<MdBattery90/>} variant="primary" placeholder="dawdw"></Input>
     </>
   );
 }
