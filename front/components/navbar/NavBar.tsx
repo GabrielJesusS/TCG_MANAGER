@@ -30,11 +30,9 @@ const NavBar: React.FC<NavBarProps> = ({})=>{
         <div className='nav-container'>
             <header className='nav-header'>
                 <Logo/>
-                <span className='text-white'>
-                    <button onClick={()=>swapNavMenu(!isNavMenuHide)} className='text-3xl lg:hidden'>
-                        <MdMenu />
-                    </button>
-                </span>
+                <button onClick={()=>swapNavMenu(!isNavMenuHide)} className='text-white text-3xl lg:hidden'>
+                    <MdMenu />
+                </button>
                 <nav className={`navigation ${isNavMenuHide ? 'hidden' : null} lg:flex`}>
                     <div className='flex w-full lg:min-w-fit lg:w-fit items-center justify-between'>
                        <div className='nav-user'>

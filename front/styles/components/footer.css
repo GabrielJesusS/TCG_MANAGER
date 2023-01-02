@@ -1,0 +1,11 @@
+.footer-container{
+    @apply bg-system-gray-900
+}
+
+.my-footer{
+    @apply py-2 text-center text-white font-medium text-xs lg:text-base
+}
+
+.footer-link{
+    @apply text-secondary-main hover:text-secondary-light
+}
