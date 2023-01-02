@@ -3,7 +3,7 @@
 }
 
 .btn-txt{
-    @apply flex items-center gap-1
+    @apply flex items-center gap-1 justify-center
 }
 
 .btn-primary{

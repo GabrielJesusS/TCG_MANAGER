@@ -7,7 +7,7 @@ export interface InputProps{
    disabled?: boolean;
 }
 
-const Input: React.FC<InputProps> = ({icon, placeholder, disabled})=>{
+const TextInput: React.FC<InputProps> = ({icon, placeholder, disabled})=>{
     return (
         <span className={`dft-input ${disabled? 'bg-system-gray-100' : null}`}>
             <span className="input-icon">{icon? <span>{icon}</span>: null}</span>
@@ -16,4 +16,4 @@ const Input: React.FC<InputProps> = ({icon, placeholder, disabled})=>{
     )
 }
 
-export default Input;
+export default TextInput;

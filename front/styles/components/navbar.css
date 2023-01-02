@@ -1,0 +1,31 @@
+.nav-header{
+    @apply bg-primary-main w-full p-3 flex items-center justify-between 
+}
+
+.navigation{
+    @apply absolute top-0 left-0 bg-white p-3 h-full flex flex-col gap-10 w-full
+}
+
+.nav-item-title, .nav-subitem{
+    @apply mx-3 text-system-gray-800 flex justify-between items-center text-lg border-b-2 border-system-gray-400
+}
+
+.nav-item-title{
+    @apply font-medium
+}
+
+.menu-chevron{
+    @apply text-secondary-main text-2xl
+}
+
+.nav-item{ 
+    @apply relative mt-6
+}
+
+.nav-subitem{
+    @apply ml-8 mt-2 text-system-gray-500 border-system-gray-100 justify-start
+}
+
+.nav-user{
+    @apply flex gap-2
+}
