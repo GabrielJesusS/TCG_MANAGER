@@ -1,5 +1,5 @@
 .dft-input{
-    @apply duration-200 focus-within:border-secondary-main border-4 border-system-gray-400 flex items-center gap-1 rounded-full px-3 py-1 group-invalid:bg-red-600
+    @apply duration-200 bg-white focus-within:border-secondary-main border-4 border-system-gray-400 flex items-center gap-1 rounded-full px-3 py-1 group-invalid:bg-red-600
 }
 
 .input-box{

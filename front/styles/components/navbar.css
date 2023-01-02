@@ -1,13 +1,24 @@
+.nav-container{
+    @apply bg-primary-main w-full flex items-center lg:justify-center
+}
+
 .nav-header{
-    @apply bg-primary-main w-full p-3 flex items-center justify-between 
+    @apply lg:max-w-7xl w-full p-3 flex items-center justify-between 
 }
 
 .navigation{
     @apply absolute top-0 left-0 bg-white p-3 h-full flex flex-col gap-10 w-full
+            lg:w-fit lg:bg-transparent lg:p-0 lg:flex-row-reverse lg:relative lg:items-center
+   
 }
 
 .nav-item-title, .nav-subitem{
     @apply mx-3 text-system-gray-800 flex justify-between items-center text-lg border-b-2 border-system-gray-400
+    lg:border-none lg:uppercase lg:text-white
+}
+
+.nav-menu{
+    @apply lg:flex 
 }
 
 .nav-item-title{
@@ -15,15 +26,29 @@
 }
 
 .menu-chevron{
-    @apply text-secondary-main text-2xl
+    @apply text-secondary-main text-2xl 
+    lg:hidden
 }
 
 .nav-item{ 
-    @apply relative mt-6
+    @apply relative mt-6 
+    lg:mt-0
 }
 
 .nav-subitem{
     @apply ml-8 mt-2 text-system-gray-500 border-system-gray-100 justify-start
+    lg:ml-0 lg:text-system-gray-800
+    lg:hover:text-red-600
+}
+
+.nav-submenu{
+    @apply lg:bg-white lg:w-fit lg:absolute lg:p-3 lg:py-6 lg:rounded-lg
+    lg:top-12 lg:shadow-2xl lg:before:w-full lg:before:h-12 lg:before:absolute 
+    lg:before:left-0 lg:before:-top-8
+    lg:after:-top-5 lg:after:shadow-2xl
+    lg:after:w-0 lg:after:h-0 lg:after:absolute
+    lg:after:left-0 lg:after:border-r-[24px] lg:after:border-l-[24px] lg:after:border-b-[24px] lg:after:border-b-white
+    lg:after:border-r-transparent lg:after:border-l-transparent
 }
 
 .nav-user{
