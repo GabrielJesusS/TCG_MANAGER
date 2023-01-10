@@ -1,0 +1,4 @@
+.notfound-main{
+    background-image: url('../../public/images/404/NotFoundBG.png');
+    @apply bg-center bg-no-repeat px-8 bg-cover text-white flex flex-col items-center text-center gap-6 justify-center
+}
