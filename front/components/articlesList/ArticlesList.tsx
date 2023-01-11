@@ -1,20 +1,23 @@
 import React from "react";
 import ArticleItem, { ArticleItemProps } from "../articleItem/ArticleItem";
+import ArticleCover from '../../public/images/article-mock.png'
 
 
 const articleInfos : ArticleItemProps[] = [
-    {
-    articleCover: "string",
-    articleTitle: "Novos pokémon",
-    articleAuthor: "Gabriel Jesus",
-    articleDesc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi suscipit doloribus blanditiis iste quo atque dolore temporibus accusamus? Sapiente iusto omnis, deserunt doloribus consequatur ex culpa nisi velit saepe nam.",
-    articleViews: 43563,
-    },
-    {
-        articleCover: "string",
+    {   
+        articleID: '1',
+        articleCover: ArticleCover.src,
         articleTitle: "Novos pokémon",
         articleAuthor: "Gabriel Jesus",
-        articleDesc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi suscipit doloribus blanditiis iste quo atque dolore temporibus accusamus? Sapiente iusto omnis, deserunt doloribus consequatur ex culpa nisi velit saepe nam.",
+        articleDesc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+        articleViews: 43563,
+    },
+    {   
+        articleID: '2',
+        articleCover: ArticleCover.src,
+        articleTitle: "Novos pokémon",
+        articleAuthor: "Gabriel Jesus",
+        articleDesc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
         articleViews: 43563,
     }
 ]
@@ -34,8 +37,7 @@ const ArticleList: React.FC<ArticleListProps> = ({topicTitle})=>{
                         {topicTitle}
                     </h3>
                 </div>
-
-                <ul>
+                <ul className="divide-y-2 divide-system-gray-100">
                     <>
                         {articleInfos.map((item, index)=>{
                             return(
@@ -43,9 +45,10 @@ const ArticleList: React.FC<ArticleListProps> = ({topicTitle})=>{
                                     <ArticleItem
                                         articleAuthor={item.articleAuthor}
                                         articleCover={item.articleCover}
-                                        articleDesc={item.articleDesc}
                                         articleTitle={item.articleTitle}
                                         articleViews={item.articleViews}
+                                        articleID={item.articleID}
+                                        articleDesc={item.articleDesc}
                                         />
                                 </li>
                             )

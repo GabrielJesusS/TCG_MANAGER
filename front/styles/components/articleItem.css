@@ -1,0 +1,43 @@
+.art-item-container{
+    @apply flex p-2 gap-2 bg-white
+}
+
+.art-cover-container{
+    @apply text-xs relative shrink 
+}
+
+.art-cover{
+    @apply w-28 flex justify-center items-center h-full lg:h-28 overflow-hidden
+}
+
+.art-cover-image{
+    @apply object-cover block h-full w-full hover:scale-110 duration-150
+}
+
+.art-views{
+   @apply absolute bottom-0 right-0 mb-1 mr-1 bg-system-gray-800 text-white p-1 rounded
+}
+
+.art-item-infos{
+    @apply text-system-gray-800 shrink grow-0
+}
+
+.art-item-title{
+    @apply text-base hover:text-secondary-main w-fit 
+    lg:text-xl
+}   
+
+.art-item-author{
+    @apply text-xs  w-fit
+    lg:text-base
+}
+
+.art-author-name{
+    @apply text-secondary-main
+}
+
+.art-item-desc{
+    @apply text-[10px] text-system-gray-400 w-36 lg:w-fit truncate 2xl:whitespace-normal
+    lg:text-sm
+}
+
