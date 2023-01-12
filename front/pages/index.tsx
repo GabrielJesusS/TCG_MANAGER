@@ -8,11 +8,7 @@ import ArticleList from "../components/articlesList/ArticlesList";
 export default function Home() {
   return (
     <>
-      <div className="p-6 bg-red-400 flex gap-2 lg:flex-row flex-col">
-        <ArticleList topicTitle="Artigos recentes" ></ArticleList>
-        <ArticleList topicTitle="Artigos recentes" ></ArticleList>
-        <ArticleList topicTitle="Artigos recentes" ></ArticleList>
-      </div>
+     
     </>
   );
 }
