@@ -1,0 +1,50 @@
+.deck-container{
+    @apply w-fit max-w-[180px] rounded-2xl overflow-clip shadow-lg
+    md:max-w-[200px]
+}
+
+.deck-cover{
+    @apply h-20  relative overflow-clip flex  justify-center items-start
+}
+
+.deck-cover-img{
+   
+}
+
+.deck-infos{
+    @apply text-xs bg-white p-2 space-y-2
+}
+
+.deck-title{
+    @apply text-base font-bold text-gray-800 duration-100 transition-all hover:text-secondary-main
+    md:text-xl
+}   
+
+.deck-author{
+    @apply block text-secondary-main duration-100 transition-all hover:text-secondary-dark
+}
+
+.deck-desc{
+    @apply hidden md:block text-system-gray-400 
+}
+
+.deck-desc span{
+ @apply truncate block
+}
+
+.deck-data{
+    @apply space-y-1
+}
+
+.deck-effic{
+
+}
+
+.deck-diffic{
+
+}
+
+.deck-wr{
+
+}
+
