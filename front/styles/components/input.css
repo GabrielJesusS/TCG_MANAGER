@@ -3,7 +3,7 @@
 }
 
 .input-box{
-    @apply w-full outline-none disabled:bg-system-gray-100 placeholder:text-system-gray-400
+    @apply  w-full box-border outline-none disabled:bg-system-gray-100 placeholder:text-system-gray-400
 }
 
 .input-icon{
