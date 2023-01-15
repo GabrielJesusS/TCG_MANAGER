@@ -6,24 +6,25 @@ import Footer from "../components/footer/Footer";
 import ArticleList from "../components/articlesList/ArticlesList";
 import DeckItem,{DeckItemProps} from "../components/deckItem/DeckItem";
 import Cover from '../public/images/card-mock.png'
+import SetItem, {SetItemProps} from "../components/setItem/SetItem";
 
-
-const deckItemInfo:DeckItemProps = {
-  deckID: 1,
-  deckAuthor: "Gabriel Jesus",
-  deckCover: Cover.src,
-  deckDesc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ullam distinctio eius facilis laboriosam, maxime temporibus.",
-  deckDif: 5,
-  deckEffic: 5,
-  deckTitle: 'Blastoise doido',
-  deckWr: 100
+const setItemProps: SetItemProps = {
+    setId: "swsh11",
+    setName: "Lost Origin",
+    setImage: "https://images.pokemontcg.io/swsh11/logo.png",
+    setIcon: "https://images.pokemontcg.io/swsh11/symbol.png",
+    releaseDate: "2022/09/09",
+    legalities: {
+      unlimited: "Legal",
+      standard: "Legal",
+      expanded: "Legal"
+    }
 }
-
 
 export default function Home() {
   return (
     <>
-     <DeckItem {...deckItemInfo}></DeckItem>
+     <SetItem {...setItemProps}></SetItem>
     </>
   );
 }

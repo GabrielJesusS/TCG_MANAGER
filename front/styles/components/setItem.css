@@ -1,0 +1,33 @@
+.set-container{
+    @apply bg-white text-xs w-fit px-2 py-3 space-y-2 flex flex-col items-center shadow-lg rounded-2xl
+    md:text-base
+}
+
+.set-icon-container{
+    @apply space-y-2 
+}
+
+.set-icon{
+    @apply w-6 mx-auto
+    md:w-10
+}
+
+.set-logo{
+    @apply w-28 hover:scale-110 duration-150 transition-transform hover:-translate-y-1
+    md:w-40
+}
+
+.set-name{
+    @apply text-system-gray-900 text-lg font-bold hover:text-secondary-main
+    md:text-xl
+}
+
+.set-release{
+    @apply text-system-gray-400
+
+}
+
+.set-legality{
+    @apply list-disc
+
+}
