@@ -7,6 +7,7 @@ import ArticleList from "../components/articlesList/ArticlesList";
 import DeckItem,{DeckItemProps} from "../components/deckItem/DeckItem";
 import Cover from '../public/images/card-mock.png'
 import SetItem, {SetItemProps} from "../components/setItem/SetItem";
+import TextInput from "../components/input/TextInput";
 
 const setItemProps: SetItemProps = {
     setId: "swsh11",
@@ -24,7 +25,7 @@ const setItemProps: SetItemProps = {
 export default function Home() {
   return (
     <>
-     <SetItem {...setItemProps}></SetItem>
+    <TextInput type="email" placeholder="Teste de input..." variant="primary"></TextInput>
     </>
   );
 }
