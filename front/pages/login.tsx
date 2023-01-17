@@ -5,6 +5,7 @@ import TextInput from '../components/input/TextInput';
 import Card from '../components/card/Card';
 import { useEffect } from 'react';
 import Vanilla from 'vanilla-tilt'
+import {MdAddAlarm} from 'react-icons/md'
 
 
 export default function Login() {
@@ -28,11 +29,11 @@ export default function Login() {
                 <Logo height={112} width={248}/>
                 <h1 className='font-bold text-2xl my-16 uppercase'>Autenticação</h1>
                 <label>
-                  Email:
+                  <span className='block'>Email:</span>
                   <TextInput type='email' className='max-w-[300px] text-base mb-8' variant="primary" placeholder="Email..."></TextInput>
                 </label>
                 <label>
-                  Senha:
+                <span className='block'>Senha:</span>
                   <TextInput type='password' className='max-w-[300px] text-base mb-8' variant="primary" placeholder="Senha..."></TextInput>
                 </label>
                 <p className='text-base mb-8'>Não possui registro? Registre-se <a className='transition-colors  hover:text-secondary-dark text-secondary-main' href="/register">aqui!</a></p>

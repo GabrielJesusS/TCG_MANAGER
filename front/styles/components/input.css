@@ -5,9 +5,9 @@
 .input-box{
     @apply w-full px-3 py-1 duration-150 outline-none border-4 border-system-gray-400 rounded-full 
     focus-within:border-secondary-main disabled:bg-system-gray-100 placeholder:text-system-gray-400
-    invalid:border-system-error-main
+    invalid:border-system-error-main 
 }
 
 .input-icon{
-    @apply text-system-gray-400 mr-4 absolute z-10 right-0 top-0 text-xl flex justify-center items-center
+    @apply text-system-gray-400 mr-4 h-full absolute z-10 right-0 top-0 text-xl flex justify-center items-center
 }
