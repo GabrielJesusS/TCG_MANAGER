@@ -7,7 +7,7 @@
 }
 
 .modal-header{
-    @apply text-xl flex justify-between
+    @apply text-xl flex justify-between mb-4 font-bold uppercase
 }
 
 .modal-close{

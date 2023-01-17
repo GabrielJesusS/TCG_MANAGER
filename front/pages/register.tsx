@@ -15,6 +15,7 @@ export default function Register() {
   });
 
   const [modalOpen, toggleModal] = useState(false)
+  const [modalErrorMsg , setModalMsg] = useState("");
 
   const username = useRef<HTMLInputElement>(null);
   const email = useRef<HTMLInputElement>(null);
@@ -46,25 +47,34 @@ export default function Register() {
       passwordValue === '' ||
       confPasswordValue === ''
     ) {
+      setModalMsg("Existem campos que ainda não foram preenchidos, por favor verifique e tente novamente!")
       toggleModal(true)
       return;
     }
 
     if (!emailValue?.includes('@')) {
-      console.log('Email invalido');
-    }
-
-    if (passwordValue !== confPasswordValue) {
-      console.log('dawdwdw');
+      setModalMsg("E-mail inválido, por favor verifique e tente novamente!")
+      toggleModal(true)
       return;
     }
 
-    console.log('tudo certo');
+    if (passwordValue !== confPasswordValue) {
+      setModalMsg("As senhas não coincidem, por favor verifique e tente novamente!")
+      toggleModal(true)
+      return;
+    }
+
+    
   }
 
   return (
     <>
-      <Modal hide={modalOpen} hideHandler={()=>toggleModal(!modalOpen)} modalTitle='Erro'></Modal>
+      <Modal hide={modalOpen} hideHandler={()=>toggleModal(!modalOpen)} modalTitle='Erro'>
+        <div className='text-center space-y-4'>
+          <p>{modalErrorMsg}</p>
+          <Button className='w-fit md:w-1/4' onClick={()=>toggleModal(!modalOpen)} variant='primary'>Ok</Button>
+        </div>
+      </Modal>
       <div className="flex flex-col h-screen">
         <main className="w-full h-full justify-center flex bg-blue-500">
           <div className="flex flex-row-reverse w-full justify-center lg:justify-around items-center max-w-7xl">
