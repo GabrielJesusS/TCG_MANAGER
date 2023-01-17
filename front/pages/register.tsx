@@ -6,6 +6,7 @@ import Card from '../components/card/Card';
 import { ChangeEvent, MutableRefObject, use, useEffect, useRef, useState } from 'react';
 import Vanilla from 'vanilla-tilt';
 import Modal from '../components/modal/Modal';
+import ky from 'ky';
 
 export default function Register() {
   useEffect(() => {
@@ -33,26 +34,28 @@ export default function Register() {
       }
   }
 
+
+
   function register(e: any) {
     e.preventDefault();
 
     const usernameValue = username.current?.value;
     const emailValue = email.current?.value;
     const passwordValue = password.current?.value;
-    const confPasswordValue = confPassword.current?.value;
+    const confPasswordValue = confPassword.current?.value; 
 
     if (
-      usernameValue === '' ||
-      emailValue === '' ||
-      passwordValue === '' ||
-      confPasswordValue === ''
+      usernameValue == '' ||
+      emailValue == '' ||
+      passwordValue == '' ||
+      confPasswordValue == ''
     ) {
       setModalMsg("Existem campos que ainda não foram preenchidos, por favor verifique e tente novamente!")
       toggleModal(true)
       return;
     }
 
-    if (!emailValue?.includes('@')) {
+    if(!emailValue?.includes('@') && emailValue != "") {
       setModalMsg("E-mail inválido, por favor verifique e tente novamente!")
       toggleModal(true)
       return;
@@ -64,7 +67,20 @@ export default function Register() {
       return;
     }
 
+    if(emailValue && usernameValue && passwordValue){
+      submitRegister(emailValue, passwordValue , usernameValue);
+    }
     
+  }
+
+  const submitRegister = async (email:string, password:string, name:string)=>{ 
+    const post = await ky.post('http://localhost:3333/user/register', {
+      json:{
+        email, password, name
+      }
+    })
+    
+    console.log(post)
   }
 
   return (
