@@ -15,7 +15,9 @@ export default function Login() {
 
     const cards = document.querySelectorAll(".pokemon-card")
 
-    Vanilla.init(cards)
+    Vanilla.init(cards, {
+      scale: 1.1
+    });
   })
 
   const email = useRef<HTMLInputElement>(null);
@@ -56,10 +58,10 @@ export default function Login() {
         </div>
       </Modal>
       <div className="flex flex-col h-screen">
-        <main className="w-full h-full justify-center flex bg-blue-500">
+        <main className="w-full h-full justify-center flex pokemon-user-bg">
           <div className='flex w-full justify-center lg:justify-around items-center max-w-7xl'>
             <div className='flex'>
-              <form action="post" className='shadow-xl flex flex-col items-center py-8 px-12 text-xl text-system-gray-900 bg-white rounded-2xl'>
+              <form action="post" className='shadow-xl flex flex-col items-center py-8 px-6 md:px-12 text-xl text-system-gray-900 bg-white rounded-2xl'>
                 <Logo height={112} width={248}/>
                 <h1 className='font-bold text-2xl my-16 uppercase'>Autenticação</h1>
                 <label>

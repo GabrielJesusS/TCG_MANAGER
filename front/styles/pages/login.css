@@ -1,0 +1,3 @@
+.pokemon-user-bg{
+    @apply bg-[url('../../public/images/login-register/bg-1.gif')] bg-no-repeat bg-cover
+}

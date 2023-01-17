@@ -3,6 +3,7 @@
 }
 
 .modal{
+    animation: modalOpen 250ms ease-in-out forwards;
     @apply bg-white w-full max-w-lg p-6 rounded-2xl
 }
 
@@ -12,4 +13,15 @@
 
 .modal-close{
     @apply hover:text-system-error-dark transition-colors duration-150
+}
+
+@keyframes modalOpen {
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

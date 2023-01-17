@@ -24,8 +24,8 @@ const setItemProps: SetItemProps = {
 
 export default function Home() {
   return (
-    <>
-    <TextInput type="email" placeholder="Teste de input..." variant="primary"></TextInput>
+    <> 
+    
     </>
   );
 }

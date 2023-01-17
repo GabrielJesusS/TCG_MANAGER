@@ -12,7 +12,9 @@ export default function Register() {
   useEffect(() => {
     const cards = document.querySelectorAll('.pokemon-card');
 
-    Vanilla.init(cards);
+    Vanilla.init(cards, {
+      scale: 1.1
+    });
   });
 
   const [modalOpen, toggleModal] = useState(false)
@@ -92,15 +94,15 @@ export default function Register() {
         </div>
       </Modal>
       <div className="flex flex-col h-screen">
-        <main className="w-full h-full justify-center flex bg-blue-500">
+        <main className="w-full h-full justify-center flex pokemon-user-bg">
           <div className="flex flex-row-reverse w-full justify-center lg:justify-around items-center max-w-7xl">
             <div className="flex">
               <form
                 action=""
-                className="shadow-xl flex flex-col space-y-4 items-center py-8 px-12 text-xl text-system-gray-900 bg-white rounded-2xl"
+                className="shadow-xl flex flex-col space-y-4 items-center py-8 px-6 md:px-12  text-xl text-system-gray-900 bg-white rounded-2xl"
               >
                 <Logo height={112} width={248} />
-                <h1 className="font-bold text-2xl my-10 uppercase">Registro</h1>
+                <h1 className="font-bold text-2xl my-4 md:my-10 uppercase">Registro</h1>
                 <label>
                   <span className="block">Nome de usuário:</span>
                   <TextInput
