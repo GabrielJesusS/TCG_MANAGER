@@ -1,9 +1,18 @@
+import Footer from "../../footer/Footer";
+
 export interface FormLayoutProps{
-    sampleTextProp: string;
+    children: React.ReactNode;
 }
 
-const FormLayout: React.FC<FormLayoutProps> = ({sampleTextProp})=>{
-    return (<div>{sampleTextProp}</div>)
+const FormLayout: React.FC<FormLayoutProps> = ({children})=>{
+    return (
+    <div className="flex flex-col h-screen">
+        <main className="w-full h-full justify-center flex pokemon-user-bg">
+                {children}
+        </main>
+        <Footer></Footer>
+    </div>
+    )
 }
 
 export default FormLayout;

@@ -7,6 +7,7 @@ import { ChangeEvent, MutableRefObject, use, useEffect, useRef, useState } from 
 import Vanilla from 'vanilla-tilt';
 import Modal from '../components/modal/Modal';
 import ky from 'ky';
+import FormLayout from '../components/layouts/formsLayout/FormLayout';
 
 export default function Register() {
   useEffect(() => {
@@ -93,9 +94,8 @@ export default function Register() {
           <Button className='w-fit md:w-1/4' onClick={()=>toggleModal(!modalOpen)} variant='primary'>Ok</Button>
         </div>
       </Modal>
-      <div className="flex flex-col h-screen">
-        <main className="w-full h-full justify-center flex pokemon-user-bg">
-          <div className="flex flex-row-reverse w-full justify-center lg:justify-around items-center max-w-7xl">
+      <FormLayout>
+      <div className="flex flex-row-reverse w-full justify-center lg:justify-around items-center max-w-7xl">
             <div className="flex">
               <form
                 action=""
@@ -172,9 +172,7 @@ export default function Register() {
               ></Card>
             </div>
           </div>
-        </main>
-        <Footer></Footer>
-      </div>
+      </FormLayout>
     </>
   );
 }
