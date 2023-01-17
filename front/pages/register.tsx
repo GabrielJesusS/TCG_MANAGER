@@ -3,15 +3,9 @@ import Logo from '../public/icons/logo-svg.svg';
 import Footer from '../components/footer/Footer';
 import TextInput from '../components/input/TextInput';
 import Card from '../components/card/Card';
-import { ChangeEvent, MutableRefObject, use, useEffect, useRef } from 'react';
+import { ChangeEvent, MutableRefObject, use, useEffect, useRef, useState } from 'react';
 import Vanilla from 'vanilla-tilt';
-
-interface registerData {
-  username: MutableRefObject<any>;
-  email: MutableRefObject<any>;
-  password: MutableRefObject<any>;
-  confPassword: MutableRefObject<any>;
-}
+import Modal from '../components/modal/Modal';
 
 export default function Register() {
   useEffect(() => {
@@ -19,6 +13,8 @@ export default function Register() {
 
     Vanilla.init(cards);
   });
+
+  const [modalOpen, toggleModal] = useState(false)
 
   const username = useRef<HTMLInputElement>(null);
   const email = useRef<HTMLInputElement>(null);
@@ -50,7 +46,7 @@ export default function Register() {
       passwordValue === '' ||
       confPasswordValue === ''
     ) {
-      console.log('Tem coisa vazia');
+      toggleModal(true)
       return;
     }
 
@@ -68,6 +64,7 @@ export default function Register() {
 
   return (
     <>
+      <Modal hide={modalOpen} hideHandler={()=>toggleModal(!modalOpen)} modalTitle='Erro'></Modal>
       <div className="flex flex-col h-screen">
         <main className="w-full h-full justify-center flex bg-blue-500">
           <div className="flex flex-row-reverse w-full justify-center lg:justify-around items-center max-w-7xl">

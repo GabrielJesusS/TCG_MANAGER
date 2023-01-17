@@ -1,0 +1,15 @@
+.modal-container{
+    @apply bg-black bg-opacity-50 absolute h-screen w-full z-50 flex justify-center items-center
+}
+
+.modal{
+    @apply bg-white w-full max-w-lg p-6 rounded-2xl
+}
+
+.modal-header{
+    @apply text-xl flex justify-between
+}
+
+.modal-close{
+    @apply hover:text-system-error-dark transition-colors duration-150
+}
