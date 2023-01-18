@@ -1,9 +1,19 @@
+import React from "react";
+import Footer from "../../footer/Footer";
+import NavBar from "../../navbar/NavBar";
+
 export interface MainLayoutProps{
-    sampleTextProp: string;
+    children: React.ReactNode
 }
 
-const MainLayout: React.FC< MainLayoutProps> = ({sampleTextProp})=>{
-    return (<div>{sampleTextProp}</div>)
+const MainLayout: React.FC<MainLayoutProps> = ({children})=>{
+    return (
+        <>
+            <NavBar/>
+                <main className="mainlayout-main">{children}</main>
+            <Footer/>
+        </>
+    )
 }
 
 export default MainLayout;

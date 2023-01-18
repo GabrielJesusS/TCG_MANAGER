@@ -1,5 +1,5 @@
 .nav-container{
-    @apply bg-primary-main w-full flex items-center lg:justify-center
+    @apply bg-primary-main w-full flex items-center lg:justify-center sticky top-0
 }
 
 .nav-header{

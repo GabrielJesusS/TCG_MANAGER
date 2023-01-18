@@ -8,6 +8,7 @@ import DeckItem,{DeckItemProps} from "../components/deckItem/DeckItem";
 import Cover from '../public/images/card-mock.png'
 import SetItem, {SetItemProps} from "../components/setItem/SetItem";
 import TextInput from "../components/input/TextInput";
+import MainLayout from "../components/layouts/mainLayout/MainLayout";
 
 const setItemProps: SetItemProps = {
     setId: "swsh11",
@@ -24,8 +25,8 @@ const setItemProps: SetItemProps = {
 
 export default function Home() {
   return (
-    <> 
-    
-    </>
+    <MainLayout>
+      
+    </MainLayout>
   );
 }
