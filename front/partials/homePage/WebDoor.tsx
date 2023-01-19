@@ -6,6 +6,7 @@ import Banner4 from '../../public/images/caroussel/banner-4.jpg'
 import Banner5 from '../../public/images/caroussel/banner-5.jpg'
 import 'swiper/css'
 import { Pagination, Autoplay } from "swiper";
+import ArticleList from "../../components/articlesList/ArticlesList";
 
 
 export interface WebDoorProps{
@@ -16,7 +17,7 @@ const images = [Banner1, Banner2, Banner3, Banner4, Banner5]
 
 const WebDoor: React.FC<WebDoorProps> = ({})=>{
     return (
-        <div className="max-w-7xl m-auto">
+        <div className="max-w-7xl m-auto bg-system-gray-100">
             <section className="">
                 <div className="relative">
                     <Swiper
@@ -28,6 +29,7 @@ const WebDoor: React.FC<WebDoorProps> = ({})=>{
                         }}
                         modules={[Autoplay, Pagination]}
                         pagination={{
+                            clickable: true,
                             el:'.home-slider-pagination',
                             bulletClass: 'home-slider-bullet',
                             bulletActiveClass: 'home-slider-bullet-active'
@@ -41,6 +43,11 @@ const WebDoor: React.FC<WebDoorProps> = ({})=>{
                     </div>
                     <div className="home-slider-pagination absolute z-10 top-0 right-0 space-y-1 m-2"></div>
                 </div>
+            </section>
+            <section className="p-6 space-y-6">
+                <ArticleList topicTitle="Mais recentes"></ArticleList>
+                <ArticleList topicTitle="Mais recentes"></ArticleList>
+                <ArticleList topicTitle="Mais recentes"></ArticleList>
             </section>
         </div>
     )

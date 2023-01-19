@@ -14,7 +14,7 @@ export default function Login() {
 
   useEffect(()=>{
 
-    const cards = document.querySelectorAll(".pokemon-card")
+    const cards = Array.from(document.querySelectorAll(".pokemon-card") as NodeListOf<HTMLElement>)
 
     Vanilla.init(cards, {
       scale: 1.1

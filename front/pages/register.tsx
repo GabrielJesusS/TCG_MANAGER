@@ -1,6 +1,5 @@
 import Button from '../components/button/Button';
 import Logo from '../public/icons/logo-svg.svg';
-import Footer from '../components/footer/Footer';
 import TextInput from '../components/input/TextInput';
 import Card from '../components/card/Card';
 import { ChangeEvent, MutableRefObject, use, useEffect, useRef, useState } from 'react';
@@ -11,7 +10,7 @@ import FormLayout from '../components/layouts/formsLayout/FormLayout';
 
 export default function Register() {
   useEffect(() => {
-    const cards = document.querySelectorAll('.pokemon-card');
+    const cards = Array.from(document.querySelectorAll(".pokemon-card") as NodeListOf<HTMLElement>)
 
     Vanilla.init(cards, {
       scale: 1.1

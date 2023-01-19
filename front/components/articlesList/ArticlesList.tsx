@@ -1,6 +1,7 @@
 import React from "react";
 import ArticleItem, { ArticleItemProps } from "../articleItem/ArticleItem";
 import ArticleCover from '../../public/images/article-mock.png'
+import Link from "next/link";
 
 
 const articleInfos : ArticleItemProps[] = [
@@ -55,6 +56,9 @@ const ArticleList: React.FC<ArticleListProps> = ({topicTitle})=>{
                         })}
                     </>
                 </ul>
+                <div className="art-footer" >
+                    <Link className="block text-center" href={'#'}>Ver mais...</Link>
+                </div>
             </section>
         </>
     )

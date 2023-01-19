@@ -1,5 +1,5 @@
 .nav-container{
-    @apply bg-primary-main w-full flex items-center lg:justify-center sticky top-0
+    @apply bg-primary-main w-full flex items-center lg:justify-center sticky top-0 z-40
 }
 
 .nav-header{
@@ -7,7 +7,7 @@
 }
 
 .navigation{
-    @apply absolute top-0 left-0 bg-white p-3 h-full flex flex-col gap-10 w-full
+    @apply absolute top-0 left-0 bg-white p-3 h-screen flex flex-col gap-10 w-full overflow-y-scroll lg:overflow-y-visible
             lg:w-fit lg:bg-transparent lg:p-0 lg:flex-row-reverse lg:relative lg:items-center
    
 }

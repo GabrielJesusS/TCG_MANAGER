@@ -1,9 +1,6 @@
 .art-container{
     @apply w-full rounded overflow-clip
 }
-.art-title{
-    @apply bg-secondary-dark text-white text-xs font-medium lg:text-xl
-}
-.art-title-txt{
-    @apply py-2 px-3
+.art-title, .art-footer{
+    @apply bg-secondary-dark text-white text-xs font-medium lg:text-xl py-2 px-3
 }
