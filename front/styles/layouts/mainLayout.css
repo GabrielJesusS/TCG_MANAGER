@@ -1,3 +1,3 @@
 .mainlayout-main{
-    @apply h-48 bg-white bg-[url('../../public/images/container_bg.png')] 
+    @apply bg-white bg-[url('../../public/images/container_bg.png')] w-full
 }

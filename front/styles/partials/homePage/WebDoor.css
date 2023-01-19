@@ -1,0 +1,21 @@
+.home-slider{
+    overflow-x: hidden;
+    width:100%;
+}
+
+.home-slide{
+    width: 100%;
+    overflow: hidden;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-slider-bullet{
+    @apply w-2 bg-system-gray-900 h-2 block rounded-full transition-all
+}
+
+.home-slider-bullet-active{
+    @apply bg-secondary-main h-3
+}
